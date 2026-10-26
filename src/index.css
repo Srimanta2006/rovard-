@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-bg: #050403;
+  --color-orange: #F15A0A;
+  --color-orange-light: #FF8A19;
+  --color-text: #F5F3EF;
+  --color-bronze: #82704B;
+
+  /* Fonts */
+  --font-heading: 'Anton', sans-serif;
+  --font-alternative: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Default website styles */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Main headings */
+h1,
+h2,
+h3,
+.hero-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+/* Alternative display typography */
+.background-heading,
+.display-heading {
+  font-family: var(--font-alternative);
+  text-transform: uppercase;
+}
+
+/* Body text, buttons, forms and navigation */
+p,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+/* Hero heading styling */
+.hero-heading {
+  line-height: 0.88;
+  letter-spacing: -0.015em;
+}
+
+/* Decorative background text */
+.background-heading {
+  color: var(--color-bronze);
+  line-height: 0.85;
+}
