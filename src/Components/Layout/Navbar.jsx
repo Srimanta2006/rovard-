@@ -27,7 +27,7 @@ const Navbar = () => {
     "relative text-[var(--color-text)] transition-all duration-300 hover:-translate-y-1 hover:text-[var(--color-orange)]";
 
   return (
-    <nav className="relative z-50 flex items-center justify-between border-b border-white/10 bg-[var(--color-bg)] px-5 py-5 md:px-10">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-white/10 bg-[var(--color-bg)] px-5 py-5 md:px-10">
 
       {/* Left: Navigation */}
       <div className="flex items-center gap-4 md:gap-8">

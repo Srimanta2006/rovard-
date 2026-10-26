@@ -5,10 +5,12 @@
 :root {
   /* Colors */
   --color-bg: #050403;
-  --color-orange: #F15A0A;
+  --color-orange: #F56213;
   --color-orange-light: #FF8A19;
+
   --color-text: #F5F3EF;
   --color-bronze: #82704B;
+  --color-hover: #9E9C9A;
 
   /* Fonts */
   --font-heading: 'Anton', sans-serif;
