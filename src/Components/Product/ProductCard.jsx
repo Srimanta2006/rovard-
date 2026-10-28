@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
                     src={product.image}
                     alt={product.name}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="h-full w-full object-cover border-2 border-[var(--color-hover)] transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
                 {/* New Drop Badge */}

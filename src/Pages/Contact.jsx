@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Navbar from '../Components/Layout/Navbar'
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
