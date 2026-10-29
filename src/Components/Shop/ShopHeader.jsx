@@ -13,7 +13,7 @@ const ShopHeader = () => {
         className='border absolute right-2 top-7 bottom-0
                   text-[19vw] leading-[15vw]
                   text-[var(--color-orange)] text-transparent
-                  [text-stroke:0.5px_var(--color-bronze)]
+                  [text-stroke:0.5px_var(--color-bronze)] tracking-wider
                   [-webkit-text-stroke:0.2px_var(--color-bronze)]
                   selection:bg-[var(--color-orange)] selection:text-[var(--color-bg)]
         '>shop</h1>
