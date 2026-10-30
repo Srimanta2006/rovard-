@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-
+import { CartContext } from '../../Context/CartContextProvider'
+import { WishlistContext } from '../../Context/WishlistContextProvider'
 const Navbar = () => {
+  const { cart } = useContext(CartContext);
+  const { wishlist } = useContext(WishlistContext)
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Shop", path: "/shop" },
@@ -17,10 +20,9 @@ const Navbar = () => {
     after:absolute after:bottom-0 after:left-0 after:h-[2px]
     after:bg-[var(--color-orange)]
     after:transition-all after:duration-300
-    ${
-      isActive
-        ? "text-[var(--color-orange)] after:w-full"
-        : "text-[var(--color-text)] after:w-0 hover:text-[var(--color-orange)] hover:after:w-full"
+    ${isActive
+      ? "text-[var(--color-orange)] after:w-full"
+      : "text-[var(--color-text)] after:w-0 hover:text-[var(--color-orange)] hover:after:w-full"
     }`;
 
   const iconStyle =
@@ -55,21 +57,36 @@ const Navbar = () => {
 
       {/* Right: Wishlist and Cart */}
       <div className="ml-3 flex items-center gap-4 md:gap-7">
-        <Link
-          to="/wishlist"
-          aria-label="Wishlist"
-          className={iconStyle}
-        >
-          <FaRegHeart size={23} />
-        </Link>
+        <div className="relative">
+          {wishlist.length > 0 && (
+            <span className="absolute -top-2 -right-2 z-10 flex h-6 min-w-6 items-center justify-center rounded-full bg-[#F15A0A] px-1 text-[13px]  text-black shadow-md">
+              {wishlist.length}
+            </span>
+          )}
 
-        <Link
-          to="/cart"
-          aria-label="Shopping cart"
-          className={iconStyle}
-        >
-          <IoCartOutline size={27} />
-        </Link>
+          <Link
+            to="/wishlist"
+            aria-label="Wishlist"
+            className={iconStyle}
+          >
+            <FaRegHeart size={23} />
+          </Link>
+        </div>
+
+        <div className="relative">
+          {cart.length > 0 && (
+            <span className="absolute -top-2 -right-2 z-10 flex h-6 min-w-6 items-center justify-center rounded-full bg-[#F15A0A] px-1 text-[13px]  text-black shadow-md">
+              {cart.length}
+            </span>
+          )}
+          <Link
+            to="/cart"
+            aria-label="Shopping cart"
+            className={iconStyle}
+          >
+            <IoCartOutline size={27} />
+          </Link>
+        </div>
       </div>
 
     </nav>

@@ -20,14 +20,12 @@ const CartContextProvider = ({ children }) => {
       // check product is already present or not
       const existingProduct = prevCart.some((item) => item?.id === product.id);
       if (existingProduct) {
-        alert("Product is already present in the cart");
         return prevCart.map((item) =>
           item?.id === product.id
             ? { ...item, quantity: (item.quantity || 0) + 1 }
             : item
         );
       }
-      alert("product added to cart");
       return [...prevCart , {...product, quantity : 1}]
     });
   }
