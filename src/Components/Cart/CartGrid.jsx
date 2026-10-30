@@ -5,7 +5,7 @@ const CartGrid = () => {
   const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useContext(CartContext)
   console.log(cart)
   return (
-    <div className="w-full">
+    <div className="w-full min-h-fit ">
 
       {cart.map((product) => (
         <div

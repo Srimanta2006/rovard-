@@ -49,7 +49,7 @@ const Categories = () => {
   ]
 
   return (
-    <div className="mt-25 w-full px-10">
+    <div className="my-25 w-full px-10">
       {/* Page heading */}
       <div className="flex flex-col gap-2">
         <span className="text-[10px] uppercase tracking-[0.28rem] text-[var(--color-orange)]">

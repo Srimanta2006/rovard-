@@ -1,12 +1,14 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export const WishlistContext = createContext(null);
 const WishlistContextProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState(()=>{
     const wishlistProducts = localStorage.getItem("wishlist");
-    return wishlistProducts ? JSON.parse(wishlistProducts) : [];
+    return wishlistProducts ? JSON.parse(wishlistProducts) : []
   })
-
+  useEffect(()=>{
+    localStorage.setItem("wishlist", JSON.stringify(wishlist))
+  },[wishlist])
   const wishlistCount = wishlist.length;
 
   // check if product is already wishlisted

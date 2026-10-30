@@ -46,7 +46,7 @@ const Navbar = () => {
       <Link
         to="/"
         aria-label="Rovard home"
-        className="absolute left-1/2 -translate-x-1/2"
+        className="absolute left-1/2 -translate-x-1/2 "
       >
         <h1 className="text-4xl text-[(--color-text)] transition-colors duration-300 hover:text-[var(--color-orange)] md:text-5xl">
           rovard

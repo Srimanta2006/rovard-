@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImg from "../../assets/Image/HeroImg.jpg";
 import { GoArrowUpRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -57,10 +58,12 @@ const Hero = () => {
         </div>
         <div>
           <p className="text-[#4D4946] text-right text-lg">520gsm fleece, garment-dyed in ember. <br />Limited run  of 600 pieces.</p>
-          <button className="flex items-center justify-center mt-4 gap-5 bg-[var(--color-orange)] text-black
-                            px-8 py-6 pr-18 text-sm tracking-widest uppercase hover:bg-[var(--color-hover)]  cursor-pointer " >
+          <Link
+          to='/shop'
+          className="flex items-center justify-center mt-4 gap-5 bg-[var(--color-orange)] text-black
+                      px-8 py-6 pr-18 text-sm tracking-widest uppercase hover:bg-[var(--color-hover)]  cursor-pointer " >
             shop the drop <GoArrowUpRight />
-          </button>
+          </Link>
         </div>
       </div>
 

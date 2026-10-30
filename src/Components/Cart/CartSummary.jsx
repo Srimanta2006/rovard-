@@ -33,7 +33,7 @@ const CartSummary = () => {
   }
 
   return (
-    <div className="w-full h-fit border border-[#333] bg-[#080706] p-5 text-[#F5F3EF]">
+    <div className=" sticky top-20 w-full h-fit border border-[#333] bg-[#080706] p-5 text-[#F5F3EF]">
 
       {/* Heading */}
       <h2 className="font-heading text-3xl uppercase">

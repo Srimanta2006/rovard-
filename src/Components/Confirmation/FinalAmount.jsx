@@ -3,7 +3,7 @@ import { CartContext } from '../../Context/CartContextProvider'
 import { Link } from 'react-router-dom'
 
 const FinalAmount = () => {
-    const { cart } = useContext(CartContext)
+    const { cart, clearCart } = useContext(CartContext)
 
     const subtotal = cart.reduce(
         (total, product) => total + (product.price * product.quantity), 0
@@ -33,6 +33,7 @@ const FinalAmount = () => {
                 </div>
             </div>
             <Link
+                onClick={clearCart}
                 to='/shop'
                 className='bg-[var(--color-orange)] w-fit px-12 py-4 uppercase text-black tracking-[0.3rem] text-xs mt-5'
             >
