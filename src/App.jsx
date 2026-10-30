@@ -8,6 +8,7 @@ import Checkout from './Pages/Checkout'
 import Wishlist from './Pages/Wishlist'
 import Contact from './Pages/Contact'
 import ProductDetails from './Components/Product/ProductDetails'
+import Confirmation from './Pages/Confirmation'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/confirmation' element={<Confirmation />} />
       </Routes>
     </section>
   )

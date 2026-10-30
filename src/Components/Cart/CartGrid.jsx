@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../Context/CartContextProvider'
 
 const CartGrid = () => {
-  const { cart, updateQuantity, removeFromCart } = useContext(CartContext)
+  const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useContext(CartContext)
   console.log(cart)
   return (
     <div className="w-full">
@@ -26,7 +26,7 @@ const CartGrid = () => {
           <div className="flex flex-1 flex-col justify-between min-h-[150px]">
 
             <div>
-              <h2 className="text-2xl text-white">
+              <h2 className="text-3xl text-white">
                 {product.name}
               </h2>
               {/* <p className='text-lg w-[55%] text-white/50'>{product.description}</p> */}
@@ -41,7 +41,7 @@ const CartGrid = () => {
 
               <button
                 onClick={() =>
-                  updateQuantity(product.id, product.quantity - 1)
+                  decreaseQuantity(product)
                 }
                 className="px-3 py-1 hover:bg-[var(--color-orange)]"
               >
@@ -54,7 +54,7 @@ const CartGrid = () => {
 
               <button
                 onClick={() =>
-                  updateQuantity(product.id, product.quantity + 1)
+                  increaseQuantity(product)
                 }
                 className="px-3 py-1 hover:bg-[var(--color-orange)]"
               >
@@ -66,7 +66,10 @@ const CartGrid = () => {
 
           {/* Price */}
           <div className="self-end pb-1 text-xl font-medium text-white">
-            ${(product.price * product.quantity).toFixed(2)}
+            <span>${(product.price * product.quantity).toFixed(2)}</span>
+            {product.quantity >1 && (
+              <p className='text-sm text-[var(--color-hover)]'>Per piece ${(product.price).toFixed(2)}</p>
+            )}
           </div>
 
           {/* Remove Button */}

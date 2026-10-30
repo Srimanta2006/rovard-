@@ -39,8 +39,8 @@ const Hero = () => {
           <h1>Built for</h1>
           <div className="relative px-4 py-2">
             <h1 className="pl-3">after dark</h1>
-          <svg className="absolute inset-0 w-full h-full pointer-events-none scale-110"
-            viewBox="0 0 100 100 " preserveAspectRatio="none">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none scale-110"
+              viewBox="0 0 100 100 " preserveAspectRatio="none">
               <path
                 d="M 5, 50
                   C 5, 10, 95,5,95,45
@@ -52,7 +52,7 @@ const Hero = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               ></path>
-          </svg>
+            </svg>
           </div>
         </div>
         <div>

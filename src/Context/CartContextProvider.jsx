@@ -32,12 +32,35 @@ const CartContextProvider = ({ children }) => {
     });
   }
 
+  //increase quantity
+  const increaseQuantity = (product)=>{
+    setCart((prev)=>
+      prev.map((item)=>
+        item.id === product.id ? {...item, quantity: item.quantity+1} : item
+      )
+    )
+  }
 
+  //decrease quantity
+  const decreaseQuantity = (product) =>{
+    setCart((prev)=>
+      prev.map((item)=>
+        item.id === product.id ? {...item, quantity: item.quantity-1} : item
+      ).filter((item)=> item.quantity>0)
+    )
+  }
+
+  // remove from cart
+  const removeFromCart =(product)=>{
+    setCart((prev)=>
+      prev.filter(item => item.id !== product.id)
+    )
+  }
 
 
 
   return (
-    <CartContext.Provider value={{cart, setCart, addToCart, cartCount}}>
+    <CartContext.Provider value={{cart, setCart, addToCart, cartCount, increaseQuantity, decreaseQuantity, removeFromCart}}>
       {children}
     </CartContext.Provider>
   )
