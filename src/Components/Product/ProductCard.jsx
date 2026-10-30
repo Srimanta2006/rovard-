@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { CartContext } from '../../Context/CartContextProvider';
 import { WishlistContext } from '../../Context/WishlistContextProvider';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useContext(CartContext);
@@ -11,13 +12,17 @@ const ProductCard = ({ product }) => {
     return (
         <article className="group min-w-0 cursor-pointer">
             {/* Product Image */}
-            <div className="relative h-[55vh]  overflow-hidden bg-[#171717]">
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover border-2 border-[var(--color-hover)] transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+            <div className="relative h-[55vh] overflow-hidden bg-[#171717]">
+                <Link
+                    to={`/product/${product.id}`}
+                >
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                        className="h-full w-full object-cover border-2 border-[var(--color-hover)] transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                </Link>
 
                 {/* New Drop Badge */}
                 {product.isNew && (
@@ -26,7 +31,6 @@ const ProductCard = ({ product }) => {
                     </span>
                 )}
 
-                {/* Wishlist Button */}
                 {/* Wishlist Button */}
                 <button
                     type="button"

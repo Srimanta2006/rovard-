@@ -13,6 +13,7 @@ const Footer = () => {
     { name: "Sweatshirts", href: "/shop/sweatshirt" },
     { name: "Outerwear", href: "/shop/outwears" },
     { name: "Accessories", href: "/shop/accessories" },
+    { name: "Caps", href: "/shop/caps" },
   ];
 
   const houseLinks = [

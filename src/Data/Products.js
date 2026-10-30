@@ -43,7 +43,7 @@ export const products = [
     price: 60,
     category: "Accessories",
     image: "https://i.pinimg.com/1200x/8b/3e/45/8b3e45446e540ca6d06633ea4b9faaf1.jpg",
-    colors: ["Black", "Hamilton Brown"],
+    colors: ["Black", "Hamilton Brown","Olive", "Beige"],
     sizes: ONE,
     description: "Compact cross-body bag in durable recycled canvas with a zip closure and a front pocket.",
     isNew: true,

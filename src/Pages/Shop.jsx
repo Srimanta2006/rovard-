@@ -9,8 +9,8 @@ const Shop = () => {
   const { category } = useParams()
   const [selectedCategory, setSelectedCategory] = useState("All");
   useEffect(()=>{
-    setSelectedCategory(category || "All");
-  },[category])
+    setSelectedCategory(category || "All")
+  })
   return (
     <div>
       <Navbar />
