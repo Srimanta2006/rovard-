@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
-import { CartContext} from '../../Context/CartContextProvider'
+import { CartContext } from '../../Context/CartContextProvider'
 const CartHeader = () => {
-    const {cartCount } = useContext(CartContext)
+    const { cartCount } = useContext(CartContext)
     return (
         <div className='mt-20 px-10 pt-32 flex items-end justify-between relative overflow-hidden border-b-[0.1px] pb-25 border-white/10'>
             <div>
-                <span
-                    className='text-sm text-[var(--color-orange)] uppercase leading-snug'
-                >{cartCount} item</span>
+                <span className='text-sm text-[var(--color-orange)] uppercase leading-snug'>
+                    {cartCount}
+                    <span className='ml-2'>item</span>
+                </span>
                 <h1 className='text-[12rem] leading-48 w-fit uppercase'>bag</h1>
                 {/* <p className='text-xl mt-4 text-white/70'>We started in a basement studio with one hoodie pattern and a dye vat. <br /> We still make everything in small runs.</p> */}
             </div>

@@ -32,21 +32,7 @@ const CartContextProvider = ({ children }) => {
     });
   }
 
-  // const addToCart = (product) => {
-  //     setCart((prevCart) => {
-  //     const existingProduct = cart.some((item) => item.id === product.id);
-  //     if(existingProduct){
-  //       toast.info("Product already exists");
-  //        return prevCart.map((item) =>
-  //         item.id === product.id
-  //           ? { ...item, quantity: item.quantity + 1 }
-  //           : item
-  //       );
-  //     }
-  //     toast.info("Product added to your cart");
-  //     return [...prevCart, { ...product, quantity: 1 }];
-  //   });
-  //   };
+
 
 
 
